@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import {colors, fontsSize, shadow} from "../../common/stylesConstants.ts";
+import {borders, colors, fontsSize, shadow} from "../../common/stylesConstants.ts";
 
 export const LoginHeader = styled('div')`
     height: 81px;
@@ -16,17 +16,17 @@ export const Logo = styled('img')`
 `;
 
 export const ButtonLogin = styled('button')<
-    {backgroundColor: string, transitionColor: string, width?: string, padding: string}>`
+    {backgroundColor: string, transitionColor: string, width?: string, padding: string, color: string, border: string, margin?: string}>`
     width: ${(props) => props.width || 'auto'};
-    margin: auto 0;
+    margin: ${(props) => props.margin || 'auto 0'};
     padding: ${(props) => props.padding};
     border-radius: 8px;
     font-size: ${fontsSize.fontMain};
     font-weight: 500;
-    color: ${(props) => props.transitionColor};
+    color: ${(props) => props.color};
     background-color: ${(props) => props.backgroundColor};
     
-    border: 1px solid ${colors.main};
+    border: ${(props) => props.border};
     transition: all 0.3s ease-in-out; 
     
     
@@ -87,4 +87,25 @@ export const RegistrationForm = styled('form')``;
 export const RegistrationFormPart = styled('div')<{margin: string}>`
     text-align: left;
     margin: ${(props) => props.margin || 0};
+`;
+
+export const WrapperConfirmationCode = styled('div')`
+    display: flex;
+    gap: 16px;
+    margin-bottom: 85px;
+`;
+
+export const DigitConfirmationCode = styled('input')`
+    width: 108px;
+    height: 156px;
+    text-align: center;
+    font-size: 48px;
+    border: ${borders.input};
+    border-radius: 80px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, &:focus {
+        border: ${borders.inputActive};
+        transition: all 0.3s ease-in-out;
+    }
 `;

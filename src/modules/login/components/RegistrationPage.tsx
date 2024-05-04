@@ -4,7 +4,7 @@ import {
     RegistrationLeftContent,
     RegistrationLeftSide,
     RegistrationRightSide,
-    WrapperRegistration
+    WrapperRegistration, WrapperRegistrationForm
 } from "../styles.ts";
 import {DefaultSubtitle, DefaultText, DefaultTitle, Highlighting} from "../../../common/styles.ts";
 import {Outlet} from "react-router-dom";
@@ -26,7 +26,9 @@ export default function RegistrationPage() {
                 <RegistrationImg src={loginImgReg}/>
             </RegistrationLeftSide>
             <RegistrationRightSide>
-                <Outlet/>
+                <WrapperRegistrationForm>
+                    <Outlet/>
+                </WrapperRegistrationForm>
             </RegistrationRightSide>
         </WrapperRegistration>
     )

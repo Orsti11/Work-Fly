@@ -10,10 +10,13 @@ export const colors = {
     grey: "rgba(107, 110, 133, 1)",
     lightGrey: "rgba(152, 160, 173, 1)",
     white: "rgba(255, 255, 255, 1)",
+    disabled: "rgb(149,149,196)",
     transparent: "rgba(0, 0, 0, 0)"
 }
 
 export const borders = {
+    button: "2px solid rgba(3, 2, 53, 1)",
+    disabled: "2px solid rgb(149,149,196)",
     input: "2px solid rgba(89, 100, 118, 0.16)",
     inputActive: "2px solid rgba(3, 2, 53, 1)"
 }
